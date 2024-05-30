@@ -1,0 +1,81 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  background: url(./assets/bg.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/* phone layout */
+
+.phone {
+  background: url(./assets/bg.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.phone::-webkit-scrollbar {
+  display: none;
+}
+
+/* home screen */
+
+.slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(indigo, violet);
+}
+.slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(indigo, violet);
+}
+
+#label {
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: slideAnimation 3s ease-in-out infinite;
+}
+
+@keyframes slideAnimation {
+  0%,
+  100% {
+    color: black;
+    filter: drop-shadow(0 0 10px purple);
+  }
+  50% {
+    color: purple;
+    filter: drop-shadow(0 0 10px purple);
+  }
+}
+
+.header i {
+  right: 125px;
+}
+
+.appScreen i {
+  cursor: pointer;
+}
